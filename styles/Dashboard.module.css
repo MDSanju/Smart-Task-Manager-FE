@@ -1,0 +1,35 @@
+.wrap {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 18px;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 18px;
+}
+
+.logout {
+  background: transparent;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  padding: 8px 12px;
+  border-radius: 8px;
+}
+
+.main {
+  display: flex;
+  gap: 18px;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+
+.card {
+  background: var(--card);
+  padding: 18px;
+  border-radius: 12px;
+  box-shadow: 0 10px 24px rgba(20, 20, 50, 0.06);
+  flex: 1 1 320px;
+  min-width: 280px;
+}
