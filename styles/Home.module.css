@@ -1,0 +1,25 @@
+.container {
+  max-width: 900px;
+  margin: 72px auto;
+  text-align: center;
+  padding: 24px;
+}
+
+.links {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  margin-top: 18px;
+}
+
+.btn {
+  padding: 10px 14px;
+  border-radius: 8px;
+  background: linear-gradient(90deg, var(--accent), #4b43d6);
+  color: #fff;
+}
+.btnOutline {
+  padding: 10px 14px;
+  border-radius: 8px;
+  border: 1px solid rgba(0, 0, 0, 0.06);
+}
