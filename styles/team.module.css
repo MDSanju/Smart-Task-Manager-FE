@@ -1,0 +1,226 @@
+/* styles/team.module.css - polished professional design */
+:root {
+  --muted: #6b7280;
+  --accent: #5661f6;
+  --accent-2: #ff8c42;
+  --shadow-sm: 0 4px 14px rgba(0, 0, 0, 0.04);
+  --shadow-md: 0 10px 26px rgba(0, 0, 0, 0.06);
+  --shadow-lg: 0 18px 40px rgba(0, 0, 0, 0.08);
+  --border-light: rgba(15, 23, 42, 0.06);
+  --border-input: rgba(86, 97, 246, 0.15);
+}
+
+/* Page heading */
+.heading {
+  font-size: 22px;
+  font-weight: 800;
+  margin-bottom: 16px;
+  color: #0f172a;
+}
+
+/* messages */
+.message {
+  padding: 12px 14px;
+  border-radius: 10px;
+  margin-bottom: 14px;
+  font-weight: 600;
+}
+.error {
+  background: #fff0f0;
+  color: #9f1239;
+  border: 1px solid rgba(220, 38, 38, 0.08);
+}
+.success {
+  background: #f0fff4;
+  color: #065f46;
+  border: 1px solid rgba(16, 185, 129, 0.08);
+}
+
+/* grid */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+  gap: 18px;
+}
+
+/* team card */
+.card {
+  background: #ffffff;
+  padding: 18px;
+  border-radius: 14px;
+  box-shadow: var(--shadow-md);
+  border: 1px solid var(--border-light);
+  text-decoration: none;
+  color: inherit;
+  display: block;
+  transition: transform 0.18s ease, box-shadow 0.18s ease;
+}
+.card:hover {
+  transform: translateY(-8px);
+  box-shadow: var(--shadow-lg);
+}
+.card h3 {
+  margin: 0;
+  font-size: 17px;
+  font-weight: 700;
+  color: #1e293b;
+}
+.card p {
+  margin: 10px 0 6px 0;
+  color: var(--muted);
+  font-size: 14px;
+  line-height: 1.4;
+}
+.card span {
+  font-size: 13px;
+  color: var(--muted);
+}
+
+/* form wrapper */
+.formWrapper {
+  max-width: 680px;
+  background: #ffffff;
+  padding: 22px;
+  border-radius: 14px;
+  box-shadow: var(--shadow-md);
+  border: 1px solid var(--border-light);
+  animation: fadeIn 0.28s ease;
+}
+.formWrapper label {
+  display: block;
+  font-weight: 600;
+  margin-top: 14px;
+  color: #0f172a;
+  font-size: 14px;
+}
+.formWrapper input,
+.formWrapper textarea,
+.formWrapper select {
+  width: 100%;
+  padding: 12px 14px;
+  border-radius: 10px;
+  border: 1px solid var(--border-input);
+  margin-top: 8px;
+  font-size: 14px;
+  outline: none;
+  transition: border 0.2s ease, box-shadow 0.2s ease;
+}
+.formWrapper input:focus,
+.formWrapper textarea:focus,
+.formWrapper select:focus {
+  border-color: var(--accent);
+  box-shadow: 0 0 0 4px rgba(86, 97, 246, 0.08);
+}
+
+/* Add styling for submit buttons inside formWrapper */
+.formWrapper button,
+.formWrapper .btnPrimary {
+  margin-top: 18px;
+  padding: 12px 16px;
+  border: none;
+  border-radius: 10px;
+  background: linear-gradient(90deg, var(--accent), #7b5cff);
+  color: white;
+  font-weight: 700;
+  font-size: 15px;
+  cursor: pointer;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+.formWrapper button:hover,
+.formWrapper .btnPrimary:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 30px rgba(86, 97, 246, 0.16);
+}
+
+/* members */
+.members {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+  gap: 14px;
+  margin-top: 14px;
+}
+.memberCard {
+  background: #ffffff;
+  padding: 14px;
+  border-radius: 12px;
+  box-shadow: var(--shadow-sm);
+  border: 1px solid var(--border-light);
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 12px;
+  transition: box-shadow 0.18s ease, transform 0.18s ease;
+}
+.memberCard:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-lg);
+}
+
+/* member info area */
+.memberInfo h4 {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 700;
+  color: #1e293b;
+}
+.memberInfo p {
+  margin: 4px 0 0 0;
+  color: var(--muted);
+  font-size: 13px;
+}
+
+/* actions */
+.actionRow {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+/* small buttons */
+.btnSmall {
+  padding: 8px 12px;
+  border-radius: 8px;
+  font-weight: 700;
+  font-size: 13px;
+  border: none;
+  cursor: pointer;
+  transition: background 0.2s ease, transform 0.15s ease;
+}
+.btnSmall:hover {
+  transform: scale(1.04);
+}
+
+/* edit & delete styles */
+.btnEdit {
+  background: #ffffff;
+  border: 1px solid rgba(86, 97, 246, 0.2);
+  color: var(--accent);
+}
+.btnDelete {
+  background: #ffffff;
+  border: 1px solid rgba(220, 38, 38, 0.15);
+  color: #dc2626;
+}
+
+/* fade */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* responsive */
+@media (max-width: 720px) {
+  .grid,
+  .members {
+    grid-template-columns: repeat(auto-fill, minmax(170px, 1fr));
+  }
+  .formWrapper {
+    padding: 16px;
+  }
+}
