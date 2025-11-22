@@ -1,13 +1,15 @@
 "use client";
 import Link from "next/link";
 import { useRouter } from "next/router";
+import { useAuth } from "@/contexts/AuthContext";
 import styles from "../styles/sidebar.module.css";
 
 export default function Sidebar() {
+  const { logout } = useAuth();
   const router = useRouter();
   const path = router.pathname;
 
-  const isActive = (p: string) => path === p || path.startsWith(p + "/");
+  const isActive = (p: string) => path === p;
 
   return (
     <aside className={styles.sidebar}>
@@ -43,7 +45,29 @@ export default function Sidebar() {
         >
           Create Team
         </Link>
+
+        <Link
+          href="/projects"
+          className={`${styles.link} ${
+            isActive("/projects") ? styles.active : ""
+          }`}
+        >
+          Projects
+        </Link>
+
+        <Link
+          href="/projects/create"
+          className={`${styles.link} ${
+            isActive("/projects/create") ? styles.active : ""
+          }`}
+        >
+          Create Projects
+        </Link>
       </nav>
+
+      <button className={styles.logoutBtn} onClick={logout}>
+        Logout
+      </button>
 
       <div className={styles.sideFooter}>
         © {new Date().getFullYear()} TaskFlow

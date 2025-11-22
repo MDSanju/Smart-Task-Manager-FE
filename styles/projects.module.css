@@ -1,0 +1,159 @@
+:root {
+  --muted: #6b7280;
+  --accent: #2563eb;
+  --accent-hover: #1d4ed8;
+
+  --shadow-sm: 0 4px 14px rgba(0, 0, 0, 0.04);
+  --shadow-md: 0 10px 26px rgba(0, 0, 0, 0.06);
+  --shadow-lg: 0 18px 40px rgba(0, 0, 0, 0.08);
+
+  --border-light: rgba(15, 23, 42, 0.06);
+  --border-input: rgba(37, 99, 235, 0.15);
+}
+
+/* ================== Page Container ================== */
+.container {
+  padding: 32px;
+}
+
+/* ================== Page Header ================== */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.title {
+  font-size: 28px;
+  font-weight: 700;
+  color: #0f172a;
+}
+
+/* ================== Buttons ================== */
+.createBtn,
+.submitBtn {
+  padding: 10px 18px;
+  background: var(--accent);
+  color: white;
+  border-radius: 8px;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.createBtn:hover,
+.submitBtn:hover {
+  background: var(--accent-hover);
+  transform: translateY(-2px);
+}
+
+/* ================== Projects Grid ================== */
+.projectList {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 20px;
+}
+
+/* ================== Project Card ================== */
+.projectCard {
+  background: #ffffff;
+  padding: 20px;
+  border-radius: 12px;
+  border: 1px solid var(--border-light);
+  box-shadow: var(--shadow-md);
+  text-decoration: none;
+  color: inherit;
+  transition: transform 0.18s ease, box-shadow 0.18s ease;
+}
+
+.projectCard:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-lg);
+}
+
+.projectName {
+  font-weight: 600;
+  font-size: 18px;
+  color: #0f172a;
+  margin-bottom: 6px;
+}
+
+.projectDescription {
+  font-size: 14px;
+  color: var(--muted);
+  margin-bottom: 10px;
+}
+
+.projectTeam {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--accent);
+}
+
+/* ================== Form Wrapper ================== */
+.formWrapper {
+  max-width: 600px;
+  padding: 28px;
+  box-shadow: var(--shadow-md);
+  border-radius: 12px;
+  border: 1px solid var(--border-light);
+  background: white;
+}
+
+.formTitle {
+  font-size: 26px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  color: #0f172a;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 16px;
+}
+
+.label {
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 6px;
+  color: #475569;
+}
+
+.input,
+.textarea,
+.select {
+  padding: 10px 14px;
+  border-radius: 8px;
+  border: 1px solid #d1d5db;
+  font-size: 15px;
+  outline: none;
+  background: #f8fafc;
+  transition: border 0.2s, box-shadow 0.2s;
+}
+
+.input:focus,
+.textarea:focus,
+.select:focus {
+  border-color: var(--accent);
+  background: white;
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.15);
+}
+
+.textarea {
+  height: 110px;
+  resize: none;
+}
+
+/* ================== Responsive ================== */
+@media (max-width: 720px) {
+  .projectList {
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  }
+
+  .formWrapper {
+    padding: 18px;
+  }
+}
